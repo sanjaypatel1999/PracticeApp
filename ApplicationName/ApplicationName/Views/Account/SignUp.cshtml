@@ -1,0 +1,51 @@
+﻿@model ApplicationName.Models.ViewModel.SignUpUserViewModel
+@{
+    ViewData["Title"] = "SignUp";
+    Layout = "~/Views/Shared/_Layout_Login.cshtml";
+}
+<div class="container">
+    <div class="row">
+        <div class="col-6 offset-3 border border-primary rounded">
+
+            <div class="text-center">
+                <h1 class="text-info">User Registration Form</h1>
+            </div>
+            <div class="card-body">
+                <form method="post" asp-action="SignUp">
+                    <div class="form-group">
+                        <label asp-for="UserName"></label>
+                        <input type="text" asp-for="UserName" class="form-control" placeholder="Enter name" autocomplete="off" />
+                        <span asp-validation-for="UserName" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Email"></label>
+                        <input type="text" asp-for="Email" class="form-control" placeholder="Enter email" autocomplete="off" />
+                        <span asp-validation-for="Email" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Mobile"></label>
+                        <input type="text" asp-for="Mobile" class="form-control" placeholder="Enter mobile" autocomplete="off" />
+                        <span asp-validation-for="Mobile" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Password"></label>
+                        <input type="text" asp-for="Password" class="form-control" placeholder="Enter password" autocomplete="off" />
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="ConfirmPassword"></label>
+                        <input type="text" asp-for="ConfirmPassword" class="form-control" placeholder="Enter password" />
+                    </div>
+
+                    <div class="form-group">
+                        <label asp-for="IsActive"></label>
+                        <input type="checkbox" checked="checked" asp-asp-for="IsActive" />
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" class="btn btn-sm btn-outline-success float-right" value="SignUp" />
+                    </div>
+                </form>
+            </div>
+        </div>
+
+    </div>
+</div>
